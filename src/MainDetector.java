@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package long_bloomfilter;
+package privacy_detector;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -25,15 +25,15 @@ import java.util.concurrent.Executors;
 
 public class MainDetector
 {
-	private final static int	S	= 30;
-	private double				gId, gP, gOpt;
-	private int					gTotalProc;
-	private long				gN, gLinesClient, gTasks, gSensitiveN, gContainsN;
-	private boolean				gWrite;
-	private String				gServerFile, gClientFile, gAcid;
-	private BufferedWriter		gSensitiveWriter, gNonSensitiveWriter;
-	private ExecutorService		gExecutorService;
-	private LongFastBloomFilter	gFilter;
+	private final static int S = 30;
+	private double	gId, gP, gOpt;
+	private int gTotalProc;
+	private long gN, gLinesClient, gTasks, gSensitiveN, gContainsN;
+	private boolean gWrite;
+	private String gServerFile, gClientFile, gAcid;
+	private BufferedWriter gSensitiveWriter, gNonSensitiveWriter;
+	private ExecutorService gExecutorService;
+	private LongFastBloomFilter gFilter;
 
 	public MainDetector(double theP, double theOpt, String theServerFile,
 			String theAcid, long theN, String theClientFile,
