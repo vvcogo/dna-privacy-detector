@@ -22,7 +22,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import long_bloomfilter.*;
+import long_bloomfilter.LongFastBloomFilter;
+import long_bloomfilter.MurmurHash;
+import long_bloomfilter.OptimizedRandomAccessFile;
 
 public class MainDetector
 {
@@ -117,6 +119,7 @@ public class MainDetector
 				}
 			}
 			aContainT1 = System.currentTimeMillis();
+			System.out.println("TimeStamp|KnowledgeFile|AcidType|KnowledgeEntries|FalsePositiveRatio|NumHashes|BfSize|InsertTime|InsertOperations|InsertThroughput|GenomeFile|NumThreads|ContainTime|ContainOperations|ContainThroughput|NumSensitive|PercentageSensitive");
 			//TS|DS|TA|N|P|K|M|Iti|Iop|Ith|G|PT|Cti|Cop|Cth|SS|PS
 			System.out.println(gId + "|"
 							+ gServerFile + "|"
@@ -128,7 +131,6 @@ public class MainDetector
 							+ (aAddT1 - aAddT0) / 1000.0 + "|"
 							+ aAddN + "|"
 							+ (aAddN / ((aAddT1 - aAddT0) / 1000.0)) + "|"
-							+ (aContainT1 - aContainT0) / 1000.0 + "|"
 							+ gClientFile + "|"
 							+ gTotalProc + "|"
 							+ (aContainT1 - aContainT0)/ 1000.0 + "|"
