@@ -1,5 +1,8 @@
-# dna-privacy-detector
-Detecting privacy-sensitive human genomic data
+<img src="http://homepages.lasige.di.fc.ul.pt/~vielmo/img/dna-privacy-detector/dna-privacy-detector-logo.png"
+ alt="FS-BioBench logo" title="FS-BioBench" />
+
+# DNA-Privacy-Detector
+###Detecting privacy-sensitive human genomic data
 
 The dna-privacy-detector is a method that systematically detects privacy-sensitive DNA segments coming directly from an input stream, using as reference a knowledge database of known privacy-sensitive nucleic and amino acid sequences.
 
